@@ -1,0 +1,16 @@
+Port <%= @port %>
+User <%= @user %>
+Group <%= @group %>
+PidFile /var/run/boa.pid
+ErrorLog /var/log/boa/error_log
+AccessLog /var/log/boa/access_log
+#UseLocaltime
+DocumentRoot <%= @docroot %>
+DirectoryIndex index.html
+DirectoryMaker /usr/lib/boa/boa_indexer
+DirectoryCache /var/spool/boa/dircache
+KeepAliveMax 1000
+KeepAliveTimeout 10
+MimeTypes /etc/mime.types
+DefaultType text/plain
+Alias /doc /usr/share/doc
